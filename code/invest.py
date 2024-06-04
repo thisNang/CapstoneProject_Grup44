@@ -4,7 +4,6 @@ import pandas as pd
 umkm_data = pd.read_csv("umkm_data.csv")
 investment_data = pd.read_csv("pinjaman_data.csv")
 
-
 st.set_page_config(layout="wide")
 
 st.title("Platform Invest UMKM Priority")
@@ -30,13 +29,11 @@ if menu == 'Data Pengajuan':
         rejection_confirmed = st.button("Tolak Pinjaman")
 
         if approval_confirmed:
-            confirm_approval = st.confirm_dialog("Yakin Menyetujui Pinjaman?")
-            if confirm_approval:
+            if st.button("Konfirmasi Setujui Pinjaman"):
                 st.success(f"Pinjaman UMKM {selected_umkm_name} telah disetujui!")
 
         if rejection_confirmed:
-            confirm_rejection = st.confirm_dialog("Yakin Menolak Pinjaman?")
-            if confirm_rejection:
+            if st.button("Konfirmasi Tolak Pinjaman"):
                 st.warning(f"Pinjaman UMKM {selected_umkm_name} telah ditolak!")
 
 elif menu == 'Riwayat Pengajuan':
@@ -63,4 +60,3 @@ elif menu == 'Profil':
         if st.form_submit_button("Simpan"):
             bank_info.update(updated_bank_info)
             st.success("Profil telah diperbarui!")
-
