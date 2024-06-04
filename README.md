@@ -81,7 +81,7 @@ Model yang dibangun berhasil memprediksi tren konsumsi energi dengan akurasi tin
 ## Kontak
 Untuk informasi lebih lanjut, silakan hubungi kami:
 - **Dhika Nusratul Janah** - dikanusratul011@gmail.com
-- **Natasha Dwi Pramudita** - 2141720147@student.polinema.ac.id
+- **Natasha Dwi Pramudita** - natashadwipramudita@gmail.com
 - **Alang Artha Iwana** - f1d021075@student.unram.ac.id
 - **Nanggala Jalasena Pramana Putra** - nanggalajalasena.21006@mhs.unesa.ac.id
 - **Rafly Gymnastiar** - rafly.gymnastiar.zulmi-2021@fst.unair.ac.id
