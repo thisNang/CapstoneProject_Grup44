@@ -22,7 +22,7 @@ if pilih_menu == 'Home':
     cols = st.columns([3,2])
     with cols[0]:
         st.markdown("<h1 style='text-align: left; font-size: 20px;'>Apa itu UMKM Priority?</h1>", unsafe_allow_html=True)
-        st.write("<h1 style='text-align: justify; font-size: 15px; font-weight: normal; '>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum odio eu feugiat pretium nibh ipsum consequat. Non tellus orci ac auctor. At erat pellentesque adipiscing commodo. In egestas erat imperdiet sed euismod nisi. Tempor commodo ullamcorper a lacus vestibulum sed arcu non odio. Et netus et malesuada fames ac turpis egestas maecenas pharetra. Malesuada bibendum arcu vitae elementum curabitur vitae nunc.</h1>", unsafe_allow_html=True)
+        st.write("<h1 style='text-align: justify; font-size: 15px; font-weight: normal; '>UMKM PRIORITY adalah sebuah aplikasi yang dirancang khusus untuk memberikan solusi terhadap tantangan akses terbatas ke pendanaan yang dihadapi oleh Usaha Mikro, Kecil, dan Menengah (UMKM). Aplikasi ini bertujuan untuk memberikan akses mudah dan cepat kepada UMKM untuk mendapatkan sumber pendanaan yang memadai, yang seringkali sulit diperoleh dari bank dan lembaga keuangan tradisional.</h1>", unsafe_allow_html=True)
         with cols[1]:
             st.image('pictures\Depan1.jpg', width=400)
     st.write(
@@ -110,13 +110,12 @@ if pilih_menu == 'Home':
                 """, 
                 unsafe_allow_html=True
             )
+        st.write("")
+        st.page_link("pages/about.py", label="Butuh Bantuan?", icon="ℹ")
     st.divider()
     st.markdown("<h1 style='text-align: left; font-size: 15px; font-weight: normal;'>Copyright © 2024 UMKMPriority. All rights reserved.</h1>", unsafe_allow_html=True)
 elif pilih_menu == 'Pengajuan':
-    cols = st.columns([1,50,1])
-    with cols[1]:
-        st.image('pictures/bgdepan.jpg', width=1100)
-    st.markdown("<h1 style='text-align: center; font-size: 25px;'>Data Pengajuan</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; font-size: 30px;'>Data Pengajuan</h1>", unsafe_allow_html=True)
     cols = st.columns([1,2])
     with cols[0]:
         st.image('pictures/user.jpg', width=300)    
@@ -143,10 +142,10 @@ elif pilih_menu == 'Pengajuan':
     st.divider()
     st.markdown("<h1 style='text-align: center; font-size: 15px; font-weight: normal;'>Copyright © 2024 UMKMPriority. All rights reserved.</h1>", unsafe_allow_html=True)
 elif pilih_menu == 'myCashFlow':
-    cols = st.columns([1,50,1])
-    with cols[1]:
-        st.image('pictures/bgdepan.jpg', width=1100)
-    st.markdown("<h1 style='text-align: center; font-size: 25px;'>Analisis Tahun 2024</h1>", unsafe_allow_html=True)
+    # cols = st.columns([1,50,1])
+    # with cols[1]:
+    #     st.image('pictures/bgdepan.jpg', width=1100)
+    st.markdown("<h1 style='text-align: center; font-size: 30px;'>Analisis Tahun 2024</h1>", unsafe_allow_html=True)
     chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
     st.bar_chart(chart_data)
     
