@@ -1,6 +1,6 @@
 
-# Capstone Project Gruo 44
-## part of IBM Skillsbuild For AI & Cybersecurity 
+# Capstone Project Grup 44
+## Part of IBM Skillsbuild For AI & Cybersecurity 
 
 ## Judul Proyek: 
 
@@ -19,7 +19,7 @@
 12. [Kontak](#kontak)
 
 ## Deskripsi Proyek
-Proyek ini bertujuan untuk menganalisis tren konsumsi energi di Indonesia dengan menggunakan teknik pembelajaran mesin. Kami menggunakan data historis dari berbagai sumber untuk memprediksi pola konsumsi energi di masa depan.
+Proyek ini bertujuan untuk mengembangkan model machine learning yang akurat untuk menilai kelayakan kredit UMKM (Usaha Mikro, Kecil, dan Menengah). Dengan menggunakan data historis dari berbagai atribut UMKM, model ini diharapkan dapat meningkatkan akses pendanaan bagi UMKM yang membutuhkan pinjaman untuk pengembangan usaha mereka.
 
 ## Anggota Kelompok
 - **Dhika Nusratul Janah** - Project Manager 
@@ -32,13 +32,12 @@ Proyek ini bertujuan untuk menganalisis tren konsumsi energi di Indonesia dengan
 
 
 ## Tujuan
-1. Menganalisis data historis .
-2. Mengidentifikasi faktor-faktor .
-3. Membangun model prediksi untuk memproyeksikan .
-4. Menyediakan rekomendasi kebijakan berdasarkan temuan dari model prediksi.
+1. Mengembangkan model machine learning yang akurat untuk menilai kelayakan kredit UMKM.
+2. Meningkatkan akses pendanaan bagi UMKM dengan memberikan penilaian kredit yang lebih tepat.
+3. Mengidentifikasi faktor-faktor penting yang mempengaruhi kelayakan kredit UMKM.
 
 ## Metodologi
-1. **Pengumpulan Data**: Mengumpulkan data dari sumber-sumber terpercaya.
+1. **Pengumpulan Data**: Mengumpulkan data dari sumber-sumber terpercaya, dalam hal ini dataset dari Kaggle.
 2. **Pemrosesan Data**: Membersihkan dan mempersiapkan data untuk analisis.
 3. **Eksplorasi Data**: Analisis deskriptif untuk memahami data.
 4. **Modeling**: Membangun model pembelajaran mesin untuk prediksi.
@@ -46,30 +45,54 @@ Proyek ini bertujuan untuk menganalisis tren konsumsi energi di Indonesia dengan
 
 ## Data
 Data yang digunakan dalam proyek ini mencakup:
-- Data 
-- Data
-- Data 
+- Usia
+- Jenis Kelamin
+- Pendapatan
+- Tingkat Pendidikan
+- Status Pernikahan
+- Jumlah Anak
+- Status Kepemilikan Rumah
+- Skor Kredit
+
+Sumber data: Kaggle (https://www.kaggle.com/datasets/sujithmandala/credit-score-classification-dataset)
 
 ## Pemrosesan Data
 Langkah-langkah pemrosesan data meliputi:
-1. Menggabungkan data dari berbagai sumber.
-2. Mengatasi nilai yang hilang dengan metode imputasi.
-3. Normalisasi dan standarisasi fitur.
+1. Mengatasi nilai yang hilang dengan metode imputasi. Setiap nilai yang hilang dalam dataset diatasi menggunakan teknik imputasi, seperti mean imputation untuk data numerik dan mode imputation untuk data kategorikal.
+2. Encoding variabel kategorikal menggunakan Label Encoding. Variabel kategorikal, seperti jenis kelamin, status pernikahan, dan status kepemilikan rumah, diubah menjadi format numerik menggunakan Label Encoding agar dapat digunakan dalam model pembelajaran mesin.
+3. Normalisasi dan standarisasi fitur. Fitur-fitur numerik dinormalisasi atau distandarisasi untuk memastikan bahwa mereka berada dalam skala yang sama, sehingga tidak ada fitur yang mendominasi yang lain dalam proses pelatihan model.
 
 ## Model Pembelajaran Mesin
 Kami menggunakan beberapa model pembelajaran mesin untuk prediksi, termasuk:
-- **xxx**
-- **xxx**
-- **xxx**
+- **Logistic Regression**
+- **Random Forest**
+- **XGBoost**
+- **LGBM**
 
 ### Implementasi Model
-Model dilatih menggunakan data historis dan divalidasi menggunakan teknik cross-validation. Hyperparameter tuning dilakukan untuk mendapatkan performa terbaik.
+Model dilatih menggunakan data historis dan divalidasi menggunakan teknik train-test split. Hyperparameter tuning dilakukan untuk mendapatkan performa terbaik.
 
 ## Hasil dan Analisis
-Hasil prediksi menunjukkan bahwa model Random Forest memiliki performa terbaik dengan nilai R-squared sebesar 0.85. Analisis lebih lanjut menunjukkan bahwa faktor ekonomi dan populasi memiliki pengaruh signifikan terhadap konsumsi energi.
+Hasil evaluasi menunjukkan bahwa model Random Forest memiliki performa terbaik dengan akurasi mencapai 100%. Model ini menunjukkan kemampuan yang sangat baik dalam mengklasifikasikan kelayakan kredit UMKM.
+
+### Logistic Regression
+- Akurasi: 93.94%
+- Precision, Recall, dan F1-score menunjukkan performa yang baik, terutama untuk kelas dengan jumlah data yang lebih besar.
+
+### Random Forest
+- Akurasi: 100%
+- Model ini memberikan hasil yang sempurna pada data uji, menunjukkan performa yang sangat kuat dalam klasifikasi.
+
+### XGBoost
+- Akurasi: 90.91%
+- Model ini juga menunjukkan performa yang baik, meskipun sedikit di bawah Random Forest.
+
+### LGBM
+- Akurasi: 69.70%
+- Model ini menunjukkan performa yang kurang dibandingkan dengan model lainnya, kemungkinan karena parameter yang digunakan belum optimal.
 
 ## Kesimpulan
-Model yang dibangun berhasil memprediksi tren konsumsi energi dengan akurasi tinggi. Temuan ini dapat digunakan oleh pemerintah dan industri untuk merencanakan kebutuhan energi di masa depan dan membuat kebijakan yang lebih baik.
+Penelitian ini berhasil mengembangkan model machine learning yang akurat untuk menilai kelayakan kredit UMKM. Model Random Forest menunjukkan performa terbaik dan akan digunakan dalam aplikasi UMKM Priority untuk memberikan rekomendasi kredit yang lebih akurat. Dengan demikian, diharapkan dapat meningkatkan akses pendanaan bagi UMKM dan mendukung pertumbuhan bisnis mereka.
 
 ## Cara Menjalankan Proyek
 1. Clone repository ini: `git clone https://github.com/username/project.git`
@@ -87,5 +110,3 @@ Untuk informasi lebih lanjut, silakan hubungi kami:
 - **Rafly Gymnastiar** - rafly.gymnastiar.zulmi-2021@fst.unair.ac.id
 
 ---
-
-Silakan sesuaikan bagian-bagian di atas sesuai dengan detail spesifik dari proyek Anda.
