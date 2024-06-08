@@ -65,9 +65,9 @@ def make_prediction(input_data):
 def get_prediction_label(prediction):
     if prediction is None:
         return "Prediction error"
-    if prediction[0] == 1:
+    if prediction[0] == 0:
         return "Average"
-    elif prediction[0] == 0:
+    elif prediction[0] == 1:
         return "High"
     elif prediction[0] == 2:
         return "Low"
