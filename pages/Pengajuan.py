@@ -1,31 +1,32 @@
 import streamlit as st
 
-cols = st.columns([3,1.3,1,1.2,1.2,1.2,1.2,1])
-with cols[0]:
-    st.markdown("<h1 style='text-align: left; font-size: 15px;'>UMKMPriority</h1>", unsafe_allow_html=True)
-with cols[2]:
-    if st.button("Home"):
-        st.switch_page("Home.py")
-with cols[3]:
-    if st.button("Pengajuan"):
-        st.switch_page("pages/Pengajuan.py")
-with cols[4]:
-    if st.button("myCashflow"):
-        st.switch_page("pages/MyCashFlow.py")
-with cols[5]:
-    if st.button("WarungKu"):
-        st.switch_page("pages/WarungKu.py")
-with cols[6]:
-    if st.button("Pengaturan"):
-        st.switch_page("pages/Pengaturan.py")
-st.divider()
+# cols = st.columns([3,1.3,1,1.2,1.2,1.2,1.2,1])
+# with cols[0]:
+#     st.markdown("<h1 style='text-align: left; font-size: 15px;'>UMKMPriority</h1>", unsafe_allow_html=True)
+# with cols[2]:
+#     if st.button("Home"):
+#         st.switch_page("Home.py")
+# with cols[3]:
+#     if st.button("Pengajuan"):
+#         st.switch_page("pages/Pengajuan.py")
+# with cols[4]:
+#     if st.button("myCashflow"):
+#         st.switch_page("pages/MyCashFlow.py")
+# with cols[5]:
+#     if st.button("WarungKu"):
+#         st.switch_page("pages/WarungKu.py")
+# with cols[6]:
+#     if st.button("Pengaturan"):
+#         st.switch_page("pages/Pengaturan.py")
+# st.divider()
 
-st.write("**Pengajuan**")
+st.title("**Pengajuan**")
+st.divider()
 
 st.markdown("<h1 style='text-align: center; font-size: 30px;'>Data Pengajuan</h1>", unsafe_allow_html=True)
 cols = st.columns([1,2])
 with cols[0]:
-    st.image('pictures/user.jpg', width=300)    
+    st.image('pictures/user.jpg', width=200)    
 with cols[1]:
     with st.form("my_form"):
         nama_pemilik = st.text_input("Nama Pemilik")

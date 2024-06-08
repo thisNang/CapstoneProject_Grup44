@@ -29,7 +29,7 @@ try:
 except FileNotFoundError:
     users_df = pd.DataFrame(columns=['username', 'password'])
 
-# # Tampilan Sign In dan Sign Up
+# Tampilan Sign In dan Sign Up
 st.title('Selamat Datang di UMKMPriority')
 
 menu = st.radio('',options=['Sign In', 'Sign Up'], horizontal=True)
