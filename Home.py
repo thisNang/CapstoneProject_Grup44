@@ -1,31 +1,35 @@
 import streamlit as st
+from PIL import Image
 
-cols = st.columns([2,1.2,1,1.2,1.2,1.2,1.2,1.5])
-with cols[0]:
-    st.markdown("<h1 style='text-align: left; font-size: 15px;'>UMKMPriority</h1>", unsafe_allow_html=True)
-with cols[2]:
-    if st.button("Home"):
-        st.switch_page("Home.py")
-with cols[3]:
-    if st.button("Pengajuan"):
-        st.switch_page("pages/Pengajuan.py")
-with cols[4]:
-    if st.button("myCashflow"):
-        st.switch_page("pages/MyCashFlow.py")
-with cols[5]:
-    if st.button("WarungKu"):
-        st.switch_page("pages/WarungKu.py")
-with cols[6]:
-    if st.button("Pengaturan"):
-        st.switch_page("pages/Pengaturan.py")
-with cols[7]:
-    if st.button("Masuk/Daftar"):
-        st.switch_page("pages/daftar.py")
-st.divider()
+# cols = st.columns([2,1.2,1,1.2,1.2,1.2,1.2,1.5])
+# with cols[0]:
+#     st.markdown("<h1 style='text-align: left; font-size: 18px;'>UMKMPriority</h1>", unsafe_allow_html=True)
+# with cols[2]:
+#     if st.button("Home"):
+#         st.switch_page("Home.py")
+# with cols[3]:
+#     if st.button("Pengajuan"):
+#         st.switch_page("pages/Pengajuan.py")
+# with cols[4]:
+#     if st.button("myCashflow"):
+#         st.switch_page("pages/MyCashFlow.py")
+# with cols[5]:
+#     if st.button("WarungKu"):
+#         st.switch_page("pages/WarungKu.py")
+# with cols[6]:
+#     if st.button("Pengaturan"):
+#         st.switch_page("pages/Pengaturan.py")
+# with cols[7]:
+#     if st.button("Masuk/Daftar"):
+#         st.switch_page("pages/daftar.py")
+# st.divider()
+
+st.title("**Home**")
+# st.divider()
 
 cols = st.columns([1,50,1])
 with cols[1]:
-    st.image('pictures/bgdepan.jpg', width=1100)
+    st.image('pictures/bgdepan.jpg', width=650)
 st.divider()
 st.markdown("<h1 style='text-align: center; font-size: 25px;'>UMKM PRIORITY</h1>", unsafe_allow_html=True)
 
@@ -34,28 +38,42 @@ with cols[0]:
     st.markdown("<h1 style='text-align: left; font-size: 20px;'>Apa itu UMKM Priority?</h1>", unsafe_allow_html=True)
     st.write("<h1 style='text-align: justify; font-size: 15px; font-weight: normal; '>UMKM PRIORITY adalah sebuah aplikasi yang dirancang khusus untuk memberikan solusi terhadap tantangan akses terbatas ke pendanaan yang dihadapi oleh Usaha Mikro, Kecil, dan Menengah (UMKM). Aplikasi ini bertujuan untuk memberikan akses mudah dan cepat kepada UMKM untuk mendapatkan sumber pendanaan yang memadai, yang seringkali sulit diperoleh dari bank dan lembaga keuangan tradisional.</h1>", unsafe_allow_html=True)
     with cols[1]:
-        st.image('pictures/Depan1.jpg', width=400)
+        st.image('pictures/Depan1.jpg', width=300)
 st.write(
             """
             <div style='background-color: lightblue; padding: 10px; border-radius: 10px;'>
-            <h1 style='text-align: center; font-size: 15px; font-weight: bold;'>Berkolaborasi dengan :</h1>
+            <h1 style='text-align: center; font-size: 15px; font-weight: bold;'>Berkolaborasi dengan : Skilvul</h1>
             </div>
             """, 
             unsafe_allow_html=True
         )
 st.text('')
 st.text('')
+
 st.markdown("<h1 style='text-align: center; font-size: 25px;'>Apa kata mereka?</h1>", unsafe_allow_html=True)
 cols = st.columns([1,1,1])
+
+image1_path = "pictures/review1.jpg"
+image2_path = "pictures/review2.jpg"
+image3_path = "pictures/review3.jpg"
+
+image1 = Image.open(image1_path)
+image2 = Image.open(image2_path)
+image3 = Image.open(image3_path)
+
 with cols[0]:
     container = st.container(border=True)
-    container.write("Review dari pelanggan")
+    container.image(image1, caption="Review dari pelanggan 1")
+    container.write("Aplikasi ini membantu saya dalam mengelola keuangan UMKM saya. Saya dapat dengan mudah mengakses sumber pendanaan yang dibutuhkan.")
 with cols[1]:
     container = st.container(border=True)
-    container.write("Review dari pelanggan")
+    container.image(image2, caption="Review dari pelanggan 2")
+    container.write("Aplikasi UMKM Priority adalah solusi terbaik bagi UMKM seperti saya dan komunitas saya yang sangat membutuhkan akses cepat ke pendanaan.")
 with cols[2]:
     container = st.container(border=True)
-    container.write("Review dari pelanggan")
+    container.image(image3, caption="Review dari pelanggan 3")
+    container.write("Dengan menggunakan UMKM Priority, saya merasa lebih mudah dalam mengatur keuangan bisnis saya. Aplikasi ini sangat direkomendasikan!")
+
 st.text('')
 st.text('')
 
@@ -68,22 +86,22 @@ st.divider()
 cols = st.columns([1,1,1,1])
 with cols[0]:
     st.write('**Contact Us**')
-    st.write('Twenty One')
-    st.write('Twenty One')
-    st.write('Twenty One')
-    st.write('Twenty One')
+    st.write('Alamat 1')
+    st.write('Alamat 2')
+    st.write('Email')
+    st.write('Telepon')
 with cols[1]:
-    st.write('**Column Two**')
-    st.write('Twenty One')
-    st.write('Twenty One')
-    st.write('Twenty One')
-    st.write('Twenty One')
+    st.write('**Layanan**')
+    st.write('Layanan 1')
+    st.write('Layanan 2')
+    st.write('Layanan 3')
+    st.write('Layanan 4')
 with cols[2]:
-    st.write('**Column Three**')
-    st.write('Twenty One')
-    st.write('Twenty One')
-    st.write('Twenty One')
-    st.write('Twenty One')
+    st.write('**Tentang Kami**')
+    st.write('Tentang 1')
+    st.write('Tentang 2')
+    st.write('Tentang 3')
+    st.write('Tentang 4')
 with cols[3]:
     st.write('**Available On**')
     st.write(
