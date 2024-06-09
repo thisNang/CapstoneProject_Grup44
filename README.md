@@ -2,7 +2,7 @@
 # Capstone Project Grup 44
 ## Part of IBM Skillsbuild For AI & Cybersecurity 
 
-## Judul Proyek: 
+## Judul Proyek: UMKMPriority
 
 ### Daftar Isi
 1. [Deskripsi Proyek](#deskripsi-proyek)
